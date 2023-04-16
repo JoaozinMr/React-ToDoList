@@ -1,38 +1,96 @@
 .App {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.list {
+  height: auto;
+  width: 100%;
   display: flex;
+  align-items: center;
+  padding-top: 50px;
   flex-direction: column;
+}
+
+.addTask {
+  height: 20vh;
+  background-color: rgb(29, 29, 29);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.addTask input {
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+.addTask button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 2px solid lightblue;
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  color: aliceblue;
+}
+
+.addTask button:hover {
+  background-color: lightblue;
+  color: rgb(29, 29, 29);
+}
+
+.task {
+  width: 31.25rem;
+  height: 3.125rem;
+  display: flex;
+  margin: 1rem;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border: 1px solid rgb(0, 81, 255);
+  border-radius: 15px;
 }
 
-.App-link {
-  color: #61dafb;
+.task button {
+  margin-left: 1.25rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.complete {
+  border-radius: 1rem;
+  padding: 8px;
+  border: 1px solid black;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.complete:hover {
+  background-color: rgb(206, 204, 204);
+}
+
+.delete {
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  border: 1px solid black;
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.delete:hover {
+  background-color: red;
 }
